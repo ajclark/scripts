@@ -17,8 +17,6 @@
 # 	This will allow the user to access FTP via 'nologin' - but not SSH. 
 # 	In general just use SSH keys with passphrases!
 
-
-
 ADMIN=napta2k@gmail.com
 WWW_GROUP=www-data
 WWW_HTDOCS=/data/htdocs
@@ -34,7 +32,7 @@ fi
 echo "Creating web user: $1 with home dir: $2..."
 useradd -g $WWW_GROUP -d ${WWW_HTDOCS}/${2} -s /sbin/nologin $1
 
-# Set passwd for web user
+# Set passwd for web user (interactive)
 echo "Enter password for web user: $1"
 passwd $1
 
