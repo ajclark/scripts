@@ -1,33 +1,36 @@
 #!/bin/sh
 
-# TODO:
-#   - Remove dependency on check_http(1) binary
+# Lighttpd restarter
+# 2008-05-07 Allan Clark - <napta2k@gmail.com>
 
 if [ -z $1 ]; then
-    echo "Usage: $0 www.example.com [/index.html]"
+    echo "Usage: $0 www.example.com"
     exit 1
 fi
 
-if [ -z $2 ]; then
-    ARGS="-H ${1}"
-else
-    ARGS="-H $1 -u ${2}"
-fi
+# Check site, timeout 1 second
+wget -T 1 --tries 1 -O - $1 > /dev/null
 
-# check_http, stolen from Nagios
-/root/scripts/check_http $ARGS
-
+# Site is down, attempt to stop lighttpd
 if [ $? != 0 ]; then
     /etc/init.d/lighttpd stop
     pgrep lighttpd
+
+# If graceful shutdown fails, send SIGKILL
     if [ $? == 0 ]; then
         pkill -9 lighttpd
     fi
+
+# Repeat for PHP fastcgi processes
     pgrep php5-cgi
     if [ $? == 0 ]; then
         pkill -9 php5-cgi
     fi
+
+# Start lighttpd again
     /etc/init.d/lighttpd start
+
+# Mail admin
     echo "${1} was restarted by ${0}" | mail -s "${1} was restarted by ${0}" napta2k@gmail.com
 fi
 
