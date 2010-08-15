@@ -10,7 +10,7 @@ if [ -z $1 ]; then
 fi
 
 # Check site, timeout 1 second
-wget -T 1 --tries 1 -O - $1 > /dev/null
+wget -q -T 1 --tries 1 -O - $1 > /dev/null
 
 # Site is down, attempt to stop lighttpd
 if [ $? != 0 ]; then
