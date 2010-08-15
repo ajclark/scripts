@@ -1,6 +1,7 @@
 #!/bin/sh
 
-# Lighttpd restarter
+# Lighttpd local restarter
+# This restarts lighttpd in the event of a weird PHP-FCGI hang
 # 2008-05-07 Allan Clark - <napta2k@gmail.com>
 
 if [ -z $1 ]; then
