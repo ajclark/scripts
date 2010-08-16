@@ -39,7 +39,7 @@ mysqlUser=dump
 
 outputDir=/c/home/backups/mysql
 defaultHost=localhost
-lockTables="--lock-tables"			# Aquire GLOBAL READ LOCK
+lockTables="--lock-all-tables"			# Aquire GLOBAL READ LOCK
 # lockTables="--single-transaction"		# Uncomment for InnoDB tables
 # lockTables=""							# Do not lock tables (DANGEROUS!)
 outputFile=$(date +%A).sql
