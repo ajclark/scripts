@@ -4,6 +4,9 @@
 # Created by Allan Clark <napta2k@gmail.com>
 # Note: POSIX compatibility mode (set -o posix) will break this script
 # Usage: ./dnscheck.sh /var/named/prod.example.com.db
+# 
+# This script will perform a forward and reverse DNS lookup against each record
+# listed in a given zonefile. This helps detects broken zones and missing PTR records.
 
 # Error counts
 entries=0
