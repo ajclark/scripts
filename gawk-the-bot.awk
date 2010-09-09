@@ -4,6 +4,7 @@
 # Allan Clark - <napta2k@gmail.com>
 # Core code written by Kristian Lyngstøl - <kristian@bohemians.org>
 # 2010-09-09
+# NOTE: No sanitization is performed on the URL before it's passed to the shell!
 
 function mpr(content) {
         print content |& server
