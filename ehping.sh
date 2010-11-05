@@ -15,9 +15,9 @@ wget -q -T 1 --tries 1 -O - $1 > /dev/null
 # Site is down, attempt to stop lighttpd
 if [ $? != 0 ]; then
     /etc/init.d/lighttpd stop
-    pgrep lighttpd
 
 # If graceful shutdown fails, send SIGKILL
+    pgrep lighttpd
     if [ $? == 0 ]; then
         pkill -9 lighttpd
     fi
