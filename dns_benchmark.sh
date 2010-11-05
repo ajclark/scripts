@@ -8,9 +8,11 @@
 # Usage:
 # ./dns_benchmark.sh dns-server-1 dns-server-2 dns-server-3 ...
 
-for host in `cat domains.txt`
+DOMAINS=(twitter.com bbc.co.uk itv.com google.ch yahoo.com playboy.com)
+
+for host in "${DOMAINS[@]}"
 do
-  for arg in $@
+  for arg in "${@}"
     do
       printf "${arg}: ${host}: `dig @${arg} ${host} | grep "Query time:"`\t"
     done
