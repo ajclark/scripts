@@ -7,22 +7,21 @@
 # Usage: ./column_by_name.awk -v col=foo filename.csv
 
 BEGIN {
-        FS=","
+  FS=","
 }
 
-{
-        if (NR == 1) {
-                for (i=1; i<=NF; i++) {
-                        if ($i == col) {
-                                break
-                        }
-                }
-        }
-        print $i
+NR == 1 {
+   for (i=1; i<=NF; i++) {
+       if ($i == col) {
+           break
+       }
+   }
 }
+
+{ print $i }
+
 
 # Only want the final record?
 END {
-        print "Final record: " $i
+  print "Final record: " $i
 }
-
