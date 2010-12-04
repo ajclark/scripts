@@ -18,7 +18,9 @@ NR == 1 {
    }
 }
 
-{ print $i }
+{ 
+   print $i 
+}
 
 
 # Only want the final record?
