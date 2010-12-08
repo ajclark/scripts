@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Collect stats from TG585 v7 router (lacks snmp)
 # Allan Clark - <napta2k@gmail.com>
@@ -9,7 +9,7 @@
 
 # Change "pass" to your router password
 
-# Call expect and talk to router
+# Talk to router over telnet
 expect -c '
    spawn telnet bebox
    expect "Username : "
