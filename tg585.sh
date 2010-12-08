@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Collect stats from TG585 v7 router (lacks snmp)
+# Allan Clark - <napta2k@gmail.com>
+# 2010-10-19
+
 # This is currently under a bash script rather than
 # native expect so we can interface with the output
 
