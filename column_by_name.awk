@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 
-# Get CSV column by name
+# Get an arbitrary CSV column by name
 # Allan Clark - <napta2k@gmail.com>
 # 2010-12-04
 
