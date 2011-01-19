@@ -2,7 +2,7 @@
 
 # Downloads images from IRC
 # Allan Clark - <napta2k@gmail.com>
-# Inspired by Kristian Lyngstøl - <kristian@bohemians.org>
+# Inspired by Kristian Lyngstøl
 # 2010-09-09
 # NOTE: No sanitization is performed on the URL before it's passed to the shell!
 
