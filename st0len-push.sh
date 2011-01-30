@@ -20,7 +20,7 @@ if [ "$1" == "--all" ]; then
 	for i in {1..3} 
 		do
        		printf "svr${i}.st0len.co.za ...\n"
-		rsync -avz --delete puppet svr${i}.st0len.co.za:/home/napta2k/ 1>/dev/null
+		rsync -avz --delete $PUPPET_PATH svr${i}.st0len.co.za:/home/napta2k/ 1>/dev/null
 		ssh svr${i}.st0len.co.za "sudo puppet -v /home/napta2k/puppet/modules/${2-$DEFAULT_ROLE}/init.pp"
 		done
 	exit 0
