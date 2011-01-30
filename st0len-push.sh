@@ -21,13 +21,13 @@ if [ "$1" == "--all" ]; then
 		do
        		printf "svr${i}.st0len.co.za ...\n"
 		rsync -avz --delete puppet svr${i}.st0len.co.za:/home/napta2k/ 1>/dev/null
-		ssh svr${i}.st0len.co.za "sudo puppet -v /home/napta2k/puppet/manifests/${2-$DEFAULT_ROLE}/init.pp"
+		ssh svr${i}.st0len.co.za "sudo puppet -v /home/napta2k/puppet/modules/${2-$DEFAULT_ROLE}/init.pp"
 		done
 	exit 0
 fi
 
 # Deploy puppet role to a single server
-rsync -avz --delete puppet ${1}:/home/napta2k/ 1>/dev/null
+rsync -avz --delete $PUPPET_PATH ${1}:/home/napta2k/ 1>/dev/null
 
 # Execute puppet
-ssh ${1} "sudo puppet -v /home/napta2k/puppet/manifests/${2-$DEFAULT_ROLE}/init.pp"
+ssh ${1} "sudo puppet -v /home/napta2k/puppet/modules/${2-$DEFAULT_ROLE}/init.pp"
