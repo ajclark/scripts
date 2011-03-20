@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Perform QA checks on DNS zones
-# Created by Allan Clark <napta2k@gmail.com>
+# Created by Allan Clark - http://github.com/ajclark/scripts/
 # Note: POSIX compatibility mode (set -o posix) will break this script
 # Usage: ./dnscheck.sh /var/named/prod.example.com.db
 # 

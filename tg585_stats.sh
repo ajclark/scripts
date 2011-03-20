@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Collect stats from TG585 v7 router via telnet (which lacks snmp)
-# Allan Clark - <napta2k@gmail.com>
+# Allan Clark - http://github.com/ajclark/scripts/
 # 2010-10-19
 
 # Change "pass" to your router password

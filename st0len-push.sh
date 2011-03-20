@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Masterless Puppet deployment script
-# Written by Allan Clark - <napta2k@gmail.com>
+# Written by Allan Clark - http://github.com/ajclark/scripts/
 # 2008-06-07
 
 DEFAULT_ROLE=common

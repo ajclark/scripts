@@ -2,7 +2,7 @@
 
 # Performs a bunch of domain lookups against a list of DNS servers
 # and reports the latency of each query across all servers. 
-# Allan Clark - <napta2k@gmail.com>
+# Allan Clark - http://github.com/ajclark/scripts/
 # 2009-06-05
 
 # Usage:

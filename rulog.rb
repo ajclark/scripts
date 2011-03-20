@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 # Rulog - Ruby Syslog Server
-# Allan Clark - < napta2k@gmail.com>
+# Allan Clark - http://github.com/ajclark/scripts/
 # 2010-04-07
 #
 # Captures syslog events and spits them out to Growl.app

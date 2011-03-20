@@ -1,7 +1,7 @@
 #!/usr/bin/env gawk -f
 
 # Downloads images from IRC
-# Allan Clark - <napta2k@gmail.com>
+# Allan Clark - http://github.com/ajclark/scripts/
 # Inspired by Kristian Lyngstøl
 # 2010-09-09
 # NOTE: No sanitization is performed on the URL before it's passed to the shell!

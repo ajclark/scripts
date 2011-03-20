@@ -1,7 +1,7 @@
 #!/usr/bin/awk -f
 
 # Get an arbitrary CSV column by name
-# Allan Clark - <napta2k@gmail.com>
+# Allan Clark - http://github.com/ajclark/scripts/
 # 2010-12-04
 
 # Usage: ./column_by_name.awk -v col=foo filename.csv

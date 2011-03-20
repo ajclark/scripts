@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Title: Add web user
-# Author: Allan Clark - <napta2k@gmail.com>
+# Author: Allan Clark - http://github.com/ajclark/scripts/
 # Date: 2008-07-07 
 #
 # Comment:
@@ -17,7 +17,7 @@
 # 	This will allow the user to access FTP via 'nologin' - but not SSH. 
 # 	In general just use SSH keys with passphrases!
 
-ADMIN=napta2k@gmail.com
+ADMIN=danievh@csnet.co.za
 WWW_GROUP=www-data
 WWW_HTDOCS=/data/htdocs
 WWW_VHOST_FILE=/etc/apache2/sites-available

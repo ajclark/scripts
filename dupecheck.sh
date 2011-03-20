@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Checks for duplicate files (based on filename)
-# Allan Clark - <napta2k@gmail.com>
+# Allan Clark - http://github.com/ajclark/scripts/
 # 2009-07-08
 
 # Usage

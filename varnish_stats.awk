@@ -1,7 +1,7 @@
 #!/usr/bin/gawk -f
 
 # Varnish stats for cacti
-# Written by Allan Clark - <napta2k@gmail.com>
+# Written by Allan Clark - http://github.com/ajclark/scripts/
 # 2010-11-26
 
 function mpr(content) {
