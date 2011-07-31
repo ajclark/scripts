@@ -11,7 +11,6 @@ def read_netdev
   file = IO.readlines("/proc/net/dev")[+2..+10]
   rxnum = file[1].scan(/#{$net_int}:(\d+)/)
   txnum = file[1].map{|i| i.split(" ")}
-  rxnum[0][0].map{|i| i.to_i}
   return rxnum[0][0].to_i, txnum[0][8].to_i
 end
 
