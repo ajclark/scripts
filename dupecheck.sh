@@ -5,7 +5,7 @@
 # 2009-07-08
 
 # Usage
-if [ -z $1 ]; then
+if [ -z "$1" ]; then
    echo "Usage: ./dupecheck.sh /dir"
    exit
 fi
