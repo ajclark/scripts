@@ -9,7 +9,7 @@
 # Date:
 #   2011-07-31
 
-def read_netdev(net_int="eth0")
+def read_linux_netdev(net_int="eth0")
   file = IO.readlines("/proc/net/dev")[+2..+10]
   rxnum = file[1].scan(/#{$net_int}:(\d+)/)
   txnum = file[1].map{|i| i.split(" ")}
@@ -25,20 +25,21 @@ def read_osx_netstat(net_int="en0")
 end
 
 case
-when %x{uname} =~ /Linux/
-  rxprevious = read_netdev[0]
-  txprevious = read_netdev[1]
-  sleep 1
-  rxcurrent = read_netdev[0]
-  txcurrent = read_netdev[1]
-when %x{uname} =~ /Darwin/
-  rxprevious = read_osx_netstat[0]
-  txprevious = read_osx_netstat[1]
-  sleep 1
-  rxcurrent = read_osx_netstat[0]
-  txcurrent = read_osx_netstat[1]
-else
-  puts "Cannot detect operating system."
+  when %x{uname} =~ /linux/i
+    rxprevious = read_linux_netdev[0]
+    txprevious = read_linux_netdev[1]
+    sleep 1
+    rxcurrent = read_linux_netdev[0]
+    txcurrent = read_linux_netdev[1]
+  when %x{uname} =~ /darwin/i
+    rxprevious = read_osx_netstat[0]
+    txprevious = read_osx_netstat[1]
+    sleep 1
+    rxcurrent = read_osx_netstat[0]
+    txcurrent = read_osx_netstat[1]
+  else
+    puts "Cannot detect operating system."
+    exit
 end
 
 rxtotal = rxcurrent-rxprevious
