@@ -6,7 +6,7 @@
 #
 # Comment:
 # 	This script will automate the process of adding a virtual host
-#	to Apache and ProFTPD. SSH access is disallowed. 
+#	to Apache and ProFTPD. SSH access is disallowed. THIS SCRIPT SHOULD NOT BE USED BY ANYONE - EVER! 
 #
 # Apache:
 # 	An Apache VirtualHost is created for the site, and the public_html and cgi-bin directories are
