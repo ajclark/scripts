@@ -25,13 +25,13 @@ def read_osx_netstat(net_int="en0")
 end
 
 case
-  when %x{uname} =~ /linux/i
+  when RUBY_PLATFORM =~ /linux/i
     rxprevious = read_linux_netdev[0]
     txprevious = read_linux_netdev[1]
     sleep 1
     rxcurrent = read_linux_netdev[0]
     txcurrent = read_linux_netdev[1]
-  when %x{uname} =~ /darwin/i
+  when RUBY_PLATFORM =~ /darwin/i
     rxprevious = read_osx_netstat[0]
     txprevious = read_osx_netstat[1]
     sleep 1
