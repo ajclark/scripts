@@ -10,9 +10,9 @@
 
 require 'net/telnet'
 
-username="graphite"
-password="graphite"
-hostname="opsstgctr01.opg.bskyb.com"
+username="user"
+password="password"
+hostname="hostname"
 
 host = Net::Telnet::new(
   "Host"    => hostname,
