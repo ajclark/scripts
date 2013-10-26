@@ -30,9 +30,9 @@ def check_fw_duplicates(ip)
   %x{#{$iptables_cmd}} =~ /#{ip}/ ? true : false
 end
 
-Net::HTTP.start("chiblksidprd01.id.bskyb.com", 80) { |http|
+Net::HTTP.start("password", 80) { |http|
   req = Net::HTTP::Get.new("/blockedIps")
-  req.basic_auth("blackbird", "password")
+  req.basic_auth("user", "password")
   response = http.request(req)
 }
 
